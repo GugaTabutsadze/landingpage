@@ -27,7 +27,7 @@ const Services = () => {
                       <h1 className={`font-medium font-mono p-1 ${[2,3,6].includes(service.id) ? "bg-lightGreen text-black" : "bg-white"}`}>{service.job}</h1>
                       <button className='flex items-center gap-[15px]'>
                       {service.id === 2 || service.id === 3 || service.id === 6 ? (
-                         <img src="/images/iconarrow1.png" alt="iconarrow1.png" />
+                         <img src="/images/monitoring.png" alt="iconarrow1.png" />
                          ) : (
                          <img src="/images/iconarrow2.png" alt="iconarrow2.png" />
                       )}
