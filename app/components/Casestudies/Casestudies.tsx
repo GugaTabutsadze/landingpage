@@ -18,7 +18,7 @@ const Casestudies = () => {
                 <div>{caseitem.text}</div>
                 <button className="flex items-center gap-4 text-green-400">
                   Learn more
-                  <img src="/images/iconarrow1.png" alt="/" />
+                  <img src="/images/Iconarrow1.png" alt="/" />
                 </button>
               </div>
             ))}

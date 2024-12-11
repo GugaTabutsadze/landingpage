@@ -1,21 +1,30 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FooterHero from './footerhero/FooterHero'
+const links = [
+  {id: 1, href: "About us"},
+  {id: 2, href: "Services"},
+  {id: 3, href: "Use Cases"},
+  {id: 4, href: "Pricing"},
+  {id: 5, href: "Blog"},
+]
+const socials = [
+  {id:6, src: "/images/linkedin.png"},
+  {id:7, src: "/images/facebook.png"},
+  {id:8, src: "/images/twitter.png"},
+]
 
 const Footer = () => {
 
-    const links = [
-        {id: 1, href: "About us"},
-        {id: 2, href: "Services"},
-        {id: 3, href: "Use Cases"},
-        {id: 4, href: "Pricing"},
-        {id: 5, href: "Blog"},
-      ]
-      const socials = [
-        {id:6, src: "/images/linkedin.png"},
-        {id:7, src: "/images/facebook.png"},
-        {id:8, src: "/images/twitter.png"},
-      ]
+  const [isHydrated, setIsHydrated] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsHydrated(true); // Ensure hydration is complete
+  }, []);
+  if (!isHydrated) return null;
+
+   
 
   return (
     <div className='px-24 py-14 mt-[140px] max-w-[1440px] w-full bg-black rounded-t-[45px] text-white'>
