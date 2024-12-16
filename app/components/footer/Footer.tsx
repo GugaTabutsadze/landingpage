@@ -27,7 +27,7 @@ const Footer = () => {
    
 
   return (
-    <div className='hidden sm:block px-24 py-14 mt-[140px] max-w-[1440px] w-full bg-black rounded-t-[45px] text-white'>
+    <div className='hidden md:block px-24 py-14 mt-[140px] max-w-[1440px] w-full bg-black rounded-t-[45px] text-white'>
       <div className='flex items-center justify-between'>
         <h1 className='text-3xl font-mono'>Here Is Your Logo</h1>
         <div className='flex items-center gap-10 font-mono underline'>
