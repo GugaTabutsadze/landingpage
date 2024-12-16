@@ -17,9 +17,9 @@ const Casestudies = () => {
         
         return (
           <>
-          <div className="sm:hidden flex flex-col items-center justify-center mt-20 px-6 py-6 sm:py-0 sm:px-0 mx-5 sm:mx-24  bg-black rounded-[45px] relative sm:p-10">
+          <div className="md:hidden flex flex-col items-center justify-center mt-20 px-6 py-6 md:py-0 sm:px-0 mx-5 md:mx-24  bg-black rounded-[45px] relative md:p-10">
             {/* Cases Container */}
-            <div className="relative w-full h-[200px] sm:h-[300px]  overflow-hidden">
+            <div className="relative w-full h-[200px] md:h-[300px]  overflow-hidden">
               {casies.map((caseitem, index) => (
                 <div
                   key={index}
@@ -27,7 +27,7 @@ const Casestudies = () => {
                     index === activeIndex ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                   }`}
                 >
-                  <div className="sm:text-xl">{caseitem.text}</div>
+                  <div className="md:text-xl">{caseitem.text}</div>
                   <button className="flex items-center gap-4 text-green-400">
                     Learn more
                     <img src="/images/arrowgreen.png" alt="arrow" />
@@ -49,7 +49,7 @@ const Casestudies = () => {
               ))}
             </div>
           </div>
-          <div className="hidden sm:flex items-center justify-center mt-20 mx-24 border bg-black rounded-[45px]">
+          <div className="hidden md:flex items-center justify-center mt-20 mx-24 border bg-black rounded-[45px]">
     <div className="grid grid-cols-3 gap-16 px-16 py-14">
       {casies.map((caseitem, index) => (
         <div

@@ -23,7 +23,7 @@ const Header = () => {
            src='/images/cosmos.png'
            alt='cosmos.png'
           />
-          <button className='sm:hidden max-w-[500px] px-10 py-2 bg-black rounded-xl
+          <button className='md:hidden max-w-[500px] px-10 py-2 bg-black rounded-xl
                text-white font-mono hover:bg-[rgb(50,50,50)]
           duration-300 transition ease-in-out'>
            Book Consultation

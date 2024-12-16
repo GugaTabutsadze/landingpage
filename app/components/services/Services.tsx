@@ -12,18 +12,18 @@ const services = [
 const Services = () => {
 
     return (
-      <div className='grid grid-cols-1 sm:grid-cols-2 w-full gap-10 px-3 sm:px-24 pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 w-full gap-10 px-3 md:px-24 pt-20'>
         {
           services.map(service => (
               <div 
                    className={`flex  mx-auto border max-w-[600px]
-                      border-black w-full gap-6 p-8 sm:p-12 rounded-[40px]
+                      border-black w-full gap-6 p-8 md:p-12 rounded-[40px]
                        ${[2,3,6].includes(service.id) ?
                          "bg-black text-white"
                          : "bg-morebisque text-black"
                         }`}
                    key={service.id}>
-                  <div className='container flex flex-col items-start gap-5 sm:gap-10'>
+                  <div className='container flex flex-col items-start gap-5 md:gap-10'>
                       <h1 className={`font-medium font-mono p-1 ${[2,3,6].includes(service.id) ? "bg-lightGreen text-black" : "bg-white"}`}>{service.job}</h1>
                       <button className='flex items-center gap-[15px]'>
                       {service.id === 2 || service.id === 3 || service.id === 6 ? (

@@ -26,17 +26,17 @@ const Faqsection = () => {
     };
   
   return (
-    <div className='sm:px-24 mt-20'>
+    <div className='md:px-24 mt-20'>
       <div>
         <ul className='flex flex-col gap-7'>
             {
              faqs.map((faqitem) => (
                <li key={faqitem.id} 
-                 className={`px-3 py-5 sm:px-14 sm:py-10 border font-mono shadow-bottom border-black rounded-[45px] ${faqOpen === faqitem.id ? "bg-lightGreen" : ""}`}>
-                 <div className='flex items-center gap-2 sm:gap-0  justify-between pb-1 sm:pb-7'>
+                 className={`px-3 py-5 md:px-14 md:py-10 border font-mono shadow-bottom border-black rounded-[45px] ${faqOpen === faqitem.id ? "bg-lightGreen" : ""}`}>
+                 <div className='flex items-center gap-2 md:gap-0  justify-between pb-1 md:pb-7'>
                     <div className='flex items-center font-medium gap-6'>
-                      <h1 className='text-sm sm:text-6xl'>{faqitem.num}</h1>
-                      <h2 className='text-sm sm:text-3xl'>{faqitem.title}</h2>
+                      <h1 className='text-sm md:text-6xl'>{faqitem.num}</h1>
+                      <h2 className='text-sm md:text-3xl'>{faqitem.title}</h2>
                     </div>
                     <div className='flex'>
                      {faqOpen === faqitem.id ? <img 
@@ -55,7 +55,7 @@ const Faqsection = () => {
                  </div>
                  {
                    faqOpen === faqitem.id &&
-                   <div className='border-t text-sm sm:text-base border-black pt-7'>
+                   <div className='border-t text-sm md:text-base border-black pt-7'>
                       <p>{faqitem.answer}</p>
                    </div>
                   }
