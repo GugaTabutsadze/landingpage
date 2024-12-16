@@ -21,7 +21,7 @@ const Logotypes = () => {
   return (
     <div className="px-24 -mt-24 sm:mt-[70px]">
       {/* Slider for mobile screens */}
-      <div className="sm:hidden text-white relative h-64">
+      <div className="md:hidden text-white relative h-64">
         {logos.map((logo, index) => (
           <div
             key={logo.id}
@@ -50,7 +50,7 @@ const Logotypes = () => {
 
       {/* Static grid for larger screens */}
       <div>
-      <ul className="hidden sm:flex justify-between">
+      <ul className="hidden md:flex justify-between">
         {logos.map((logo) => (
           <li
             key={logo.id}
