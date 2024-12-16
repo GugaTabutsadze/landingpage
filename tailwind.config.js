@@ -20,6 +20,12 @@ module.exports = {
       boxShadow: {
         bottom: "0px 5px 0px 0px #191A23",
       },
+      screens: {
+        sm: "375px",
+        md: '768px',
+        lg: '1024px',
+        xl: "1440px",
+      }
     },
   },
   plugins: [],

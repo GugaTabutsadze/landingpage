@@ -23,7 +23,7 @@ const Contactus = () => {
   
   
   return (
-    <div className='flex items-center justify-between px-24 py-14 bg-morebisque rounded-2xl mt-20'>
+    <div className='flex items-center justify-between px-4 sm:px-24 py-14 bg-morebisque rounded-2xl mt-20'>
       <form className='flex flex-col max-w-[500px] w-full gap-10'>
         <div className='flex gap-8'>
            <label className='flex gap-3'>
@@ -74,7 +74,7 @@ const Contactus = () => {
              </button>
         </div>
       </form>
-      <img  className='w-1/3' src='/images/operator.png' alt='operator.png' />
+      <img  className='hidden sm:block w-1/3' src='/images/operator.png' alt='operator.png' />
     </div>
   )
 }

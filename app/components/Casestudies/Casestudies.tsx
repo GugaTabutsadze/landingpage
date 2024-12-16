@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 
 
 const Casestudies = () => {
@@ -7,24 +8,66 @@ const Casestudies = () => {
         {id:2, text: "For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic."},
         {id:3, text: "For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales."},
     ]
-    return (
-        <div className="flex items-center justify-center mt-20 mx-24 border bg-black rounded-[45px]">
-          <div className="grid grid-cols-3 gap-16 px-16 py-14">
-            {casies.map((caseitem, index) => (
-              <div
-                key={caseitem.id}
-                className={`flex flex-col items-start justify-between gap-5 text-white max-w-[286px] w-full`}
-              >
-                <div>{caseitem.text}</div>
-                <button className="flex items-center gap-4 text-green-400">
-                  Learn more
-                  <img src="/images/arrowgreen.png" alt="/" />
-                </button>
-              </div>
-            ))}
+
+    const [activeIndex, setActiveIndex] = useState<number>(0); // Track the active testimonial index
+    
+        const handleNavigation = (index: number): void => {
+          setActiveIndex(index);
+        };
+        
+        return (
+          <>
+          <div className="sm:hidden flex flex-col items-center justify-center mt-20 px-6 py-6 sm:py-0 sm:px-0 mx-5 sm:mx-24  bg-black rounded-[45px] relative sm:p-10">
+            {/* Cases Container */}
+            <div className="relative w-full h-[200px] sm:h-[300px]  overflow-hidden">
+              {casies.map((caseitem, index) => (
+                <div
+                  key={index}
+                  className={`absolute top-0 left-0 w-full h-full flex flex-col items-start justify-between sm:p-10 text-white transition-transform duration-700 ease-in-out ${
+                    index === activeIndex ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                  }`}
+                >
+                  <div className="sm:text-xl">{caseitem.text}</div>
+                  <button className="flex items-center gap-4 text-green-400">
+                    Learn more
+                    <img src="/images/arrowgreen.png" alt="arrow" />
+                  </button>
+                </div>
+              ))}
+            </div>
+        
+            {/* Navigation points */}
+            <div className="flex justify-center gap-4 mt-8">
+              {casies.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleNavigation(index)}
+                  className={`w-4 h-4 rounded-full transition-colors duration-300 ${
+                    index === activeIndex ? 'bg-lightGreen' : 'bg-morebisque'
+                  }`}
+                ></button>
+              ))}
+            </div>
           </div>
+          <div className="hidden sm:flex items-center justify-center mt-20 mx-24 border bg-black rounded-[45px]">
+    <div className="grid grid-cols-3 gap-16 px-16 py-14">
+      {casies.map((caseitem, index) => (
+        <div
+          key={caseitem.id}
+          className={`flex flex-col items-start justify-between gap-5 text-white max-w-[286px] w-full`}
+        >
+          <div>{caseitem.text}</div>
+          <button className="flex items-center gap-4 text-green-400">
+            Learn more
+            <img src="/images/arrowgreen.png" alt="/" />
+          </button>
         </div>
-      );
-    };
+      ))}
+    </div>
+  </div>
+          </>
+        );
+        
+      }        
 
 export default Casestudies

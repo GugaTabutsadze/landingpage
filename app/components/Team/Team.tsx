@@ -12,8 +12,8 @@ const Team = () => {
     ]
 
   return (
-    <div className='px-24'>
-      <div className='grid grid-cols-3 gap-10 mt-20 font-mono'>
+    <div className='px-2 sm:px-24'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mt-20 font-mono'>
          {
            members.map((member, index) => 
            (

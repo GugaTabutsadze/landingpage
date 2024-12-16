@@ -24,19 +24,19 @@ const Testimonials = () => {
 
 
     return (
-        <div className="px-24  mt-20">
+        <div className="sm:px-24 mt-5 sm:mt-20">
           {/* Add relative to the container */}
           <div className="bg-black rounded-[45px] text-white relative overflow-hidden h-64">
             {
               testiomials.map((testimonial, index) => (
                 <div 
                   key={index} 
-                  className={`w-1/2 transition-all duration-500 ease-in-out transform ${
+                  className={`sm:w-1/2 py-7 sm:py-0 transition-all duration-500 ease-in-out transform ${
                     index === activeIndex ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-                  } absolute inset-0 left-[25%] top-[15%]`}
+                  } absolute inset-0 left-[5%] sm:left-[25%] sm:top-[15%]`}
                 >
-                  <h1 className="text-2xl font-bold text-lightGreen pb-10">{testimonial.name}</h1>
-                  <p className="text-lg mt-4">{testimonial.text}</p>
+                  <h1 className="sm:text-2xl font-bold text-lightGreen pb-10">{testimonial.name}</h1>
+                  <p className="sm:text-lg mt-4">{testimonial.text}</p>
                 </div>
               ))
             }
